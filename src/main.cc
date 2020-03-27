@@ -3,6 +3,10 @@
 #include "clip_win.h"
 #elif __APPLE__
 #include "clip_osx.h"
+#else
+Local<Array> get_file_names(Isolate *isolate) {
+	return Array::New(isolate, 0);
+}
 #endif
 
 namespace clipboard
