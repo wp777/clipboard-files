@@ -4,6 +4,9 @@
 #elif __APPLE__
 #include "clip_osx.h"
 #else
+using v8::Array;
+using v8::Isolate;
+using v8::Local;
 Local<Array> get_file_names(Isolate *isolate) {
 	return Array::New(isolate, 0);
 }
